@@ -48,7 +48,7 @@ h1 em, h2 em { color: var(--red); font-style: normal; }
 .button-red:hover { background: var(--ink); box-shadow: 7px 7px 0 var(--red); }
 .button-red span { color: var(--white); }
 .button-black { color: var(--white); background: var(--black); }
-.button-black:hover { background: var(--black); box-shadow: 7px 7px 0 var(--red); }
+.button-black:hover { background: var(--black); box-shadow: 7px 7px 0 var(--white); }
 .button-black span { color: var(--white); }
 .text-link { font-size: 11px; font-weight: 700; border-bottom: 1px solid var(--ink); padding-bottom: 5px; }
 .text-link span { color: var(--red); font-size: 15px; margin-left: 8px; }
