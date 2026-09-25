@@ -1,4 +1,5 @@
 const serviceItems = document.querySelectorAll('.service-item');
+const workLink = document.querySelector('.work-link');
 
 serviceItems.forEach((item) => {
   item.addEventListener('mouseenter', () => {
@@ -9,6 +10,16 @@ serviceItems.forEach((item) => {
     item.querySelector('.service-arrow').textContent = '↗';
   });
 });
+
+if (workLink) {
+  workLink.addEventListener('mouseenter', () => {
+    workLink.querySelector('span').textContent = '↘';
+  });
+
+  workLink.addEventListener('mouseleave', () => {
+    workLink.querySelector('span').textContent = '↗';
+  });
+}
 
 const statNumbers = document.querySelectorAll('.stat-number');
 
