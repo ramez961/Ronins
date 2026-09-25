@@ -3,4 +3,4 @@
   functions = "netlify/functions"
 
 [build.environment]
-  SECRETS_SCAN_OMIT_KEYS = "SUPABASE_URL,SUPABASE_SERVICE_ROLE_KEY,RESEND_API_KEY"
+  SECRETS_SCAN_OMIT_PATHS = "netlify/functions/**"

@@ -36,5 +36,6 @@ Deploy the repository as a Netlify site. Netlify automatically detects the
 function in `netlify/functions/submit-contact.js`. Never expose the Supabase
 service-role key in frontend code.
 
-`netlify.toml` keeps these server-side function variables out of the static
-build's secret scan while leaving secret scanning enabled for other files.
+`netlify.toml` keeps the server-side function bundle out of the static build's
+secret scan while leaving secret scanning enabled for other files. Local
+environment files are ignored by `.gitignore`.
