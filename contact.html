@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tell Ronins about your film or series project.">
+  <title>Ronins - Start a project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Ronins home">
+      <span class="brand-mark" aria-hidden="true"><img src="assets/vecteezy_samurai-silhouette-logo-in-front-of-red-moon-vector_33093844.svg" alt="" width="31" height="31"></span>
+      <span class="brand-name">RONINS<span class="brand-dot">.</span></span>
+    </a>
+    <a class="header-link" href="index.html">Back to home <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="form-page section-pad">
+    <div class="form-intro">
+      <p class="eyebrow"><span class="eyebrow-line"></span> Start a project</p>
+      <h1>Let’s make<br><em>something felt.</em></h1>
+      <p>Tell us about the film, series, or scene you are building. We’ll get back to you by email.</p>
+    </div>
+    <form class="project-form" name="project-inquiry">
+      <label>Full name<input name="name" type="text" autocomplete="name" required></label>
+      <label>Email address<input name="email" type="email" autocomplete="email" required></label>
+      <label>Production company <span>(optional)</span><input name="company" type="text" autocomplete="organization"></label>
+      <label>Project type
+        <select name="projectType" required>
+          <option value="">Select one</option>
+          <option>Feature film</option>
+          <option>Series</option>
+          <option>Commercial</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>What do you need?
+        <select name="service" required>
+          <option value="">Select one</option>
+          <option>AI photos</option>
+          <option>AI videos</option>
+          <option>Story worlds</option>
+          <option>Not sure yet</option>
+        </select>
+      </label>
+      <label class="full-width">Tell us about the project<textarea name="message" rows="6" required></textarea></label>
+      <input class="form-honeypot" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="button button-black full-width" type="submit">Send inquiry <span>↗</span></button>
+      <p class="form-status full-width" role="status" aria-live="polite"></p>
+    </form>
+  </main>
+  <script src="contact.js"></script>
+</body>
+</html>
