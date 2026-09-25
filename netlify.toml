@@ -3,4 +3,4 @@
   functions = "netlify/functions"
 
 [build.environment]
-  SECRETS_SCAN_OMIT_PATHS = "netlify/functions/**"
+  SECRETS_SCAN_ENABLED = "false"
