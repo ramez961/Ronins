@@ -30,6 +30,8 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
 .main-nav a:hover, .header-link:hover, .text-link:hover { color: var(--red); }
 .header-link { font-size: 12px; font-weight: 700; }
 .header-link span, .button span { color: var(--red); font-size: 16px; margin-left: 9px; }
+.button span { display: inline-block; transition: transform .25s ease; }
+.button:hover span { transform: translate(4px, -4px); }
 .work-link span { display: inline-block; transition: transform .25s ease; }
 .work-link:hover span { transform: translate(4px, -4px); }
 .section-pad { padding-left: 5.5vw; padding-right: 5.5vw; }
