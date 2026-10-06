@@ -1,5 +1,10 @@
 const form = document.querySelector('.project-form');
 const status = document.querySelector('.form-status');
+const requestedService = new URLSearchParams(window.location.search).get('service');
+const serviceSelect = form.elements.namedItem('service');
+if ([...serviceSelect.options].some(option => option.value === requestedService)) {
+  serviceSelect.value = requestedService;
+}
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
