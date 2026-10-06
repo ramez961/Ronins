@@ -121,3 +121,34 @@ body { position: relative; isolation: isolate; }
 .form-status { color: var(--white); }
 .form-status.success { color: #dfe7e3; }
 .auto-intake .form-intro > p, .auto-grid p, .auto-note { color: var(--muted); }
+.theme-light {
+  --ink: #0c090d;
+  --muted: rgba(12,9,13,.72);
+  --line: rgba(82,17,18,.24);
+  color: var(--ink);
+  background-color: #dfe7e3;
+  background-image: linear-gradient(rgba(223,231,227,.72),rgba(223,231,227,.72)),url("assets/waves-light.svg");
+  background-size: auto,84px 42px;
+}
+.theme-light .brand, .theme-light .main-nav, .theme-light .header-link,
+.theme-light .brand-dot, .theme-light .header-link span, .theme-light .auto-back span,
+.theme-light .text-link span, .theme-light .section-kicker, .theme-light .eyebrow,
+.theme-light h1 em, .theme-light h2 em { color: var(--red-deep); }
+.theme-light .eyebrow-line { background: var(--red-deep); }
+.theme-light .brand-mark { height: 40px; }
+.theme-light .brand-mark img { width: 100%; height: 100%; object-fit: contain; clip-path: none; }
+.theme-light .button { color: var(--white); background: var(--red-deep); }
+.theme-light .button span { color: var(--white); }
+.theme-light .button:hover { color: var(--white); background: var(--red-deep); box-shadow: 5px 5px 0 rgba(82,17,18,.2); }
+.theme-light .text-link { border-color: var(--red-deep); }
+.theme-light a:hover { color: var(--red-deep); }
+.theme-light .button:hover { color: var(--white); }
+.theme-light a:focus-visible, .theme-light :focus-visible { outline-color: var(--red-deep); }
+.theme-light .project-form input:focus, .theme-light .project-form select:focus,
+.theme-light .project-form textarea:focus { border-color: var(--red-deep); }
+.theme-light .project-form input::placeholder, .theme-light .project-form textarea::placeholder { color: rgba(12,9,13,.58); }
+.theme-light .project-form select option { color: var(--ink); background: #dfe7e3; }
+.theme-light .project-form input[type="checkbox"] { accent-color: var(--red-deep); }
+.theme-light .form-status { color: var(--red-deep); }
+.theme-light .form-status.success { color: #225a39; }
+.theme-light .main-nav a::after, .theme-light .header-link::after { background: var(--red-deep); }
