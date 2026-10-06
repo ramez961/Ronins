@@ -123,3 +123,8 @@ h2 span { color: var(--muted); }
   .service-item { min-height: 124px; }.service-number { font-size: 12px; }.service-item h3 { font-size: 35px; }.proof-grid { padding-top: 24px; }.stat p { letter-spacing: .06em; }
   .contact { min-height: 560px; }.contact h2 { font-size: clamp(54px, 17vw, 83px); }.contact-content > p:not(.eyebrow) { max-width: 290px; }.contact-stamp { font-size: 260px; }
 }
+
+.automotive-entry { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 22px; margin-top: 35px; }
+.automotive-entry p { margin: 0; font-size: 11px; color: rgba(255,255,255,.62); }
+.automotive-entry .text-link { border-color: rgba(255,255,255,.35); line-height: 1.6; }
+@media(max-width:800px) { .automotive-entry { align-items: flex-start; flex-direction: column; } }

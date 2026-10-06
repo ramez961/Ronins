@@ -1,0 +1,42 @@
+.auto-back { font-size: 12px; font-weight: 700; }
+.auto-back span { color: var(--red); }
+.auto-hero { display: grid; grid-template-columns: 55% 45%; border-bottom: 1px solid var(--line); }
+.auto-hero-copy { padding: 95px 4vw 95px 0; min-width: 0; }
+.auto-hero h1 { font-size: clamp(64px, 9vw, 140px); line-height: 1; }
+.auto-art { background: var(--red); color: var(--white); padding: 40px; display: flex; flex-direction: column; justify-content: space-between; min-height: 610px; position: relative; overflow: hidden; background-image: repeating-linear-gradient(135deg, transparent 0 18px, rgba(0,0,0,.06) 19px 20px); }
+.auto-art > p { font-size: 10px; letter-spacing: .13em; }
+.auto-art-word { font: 800 clamp(70px, 9vw, 145px)/1 var(--display); letter-spacing: -.02em; }
+.auto-art-word em { color: var(--black); font-style: normal; }
+.auto-art-caption { margin: 32px 0 0; line-height: 1.7; }
+.auto-offer, .auto-process { padding-top: 100px; padding-bottom: 100px; }
+.automotive-page h2 { font-size: clamp(44px, 6vw, 88px); line-height: 1.05; margin: 35px 0 45px; }
+.auto-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 35px; }
+.auto-grid article { border-top: 1px solid var(--line); padding-top: 25px; }
+.auto-grid h3 { font-size: 32px; margin: 20px 0 16px; }
+.auto-grid p, .auto-note { font-size: 14px; line-height: 1.6; color: var(--muted); }
+.auto-note { max-width: 720px; border-top: 1px solid var(--line); padding-top: 25px; margin: 45px 0 0; }
+.auto-process { background: var(--black); color: var(--white); }
+.auto-process h2 span, .auto-process p { color: rgba(255,255,255,.65); }
+.auto-process .section-kicker { color: var(--red); }
+.auto-process ol { padding-left: 22px; margin-bottom: 0; }
+.auto-process li { padding-left: 8px; }
+.auto-process li::marker { color: var(--red); font-weight: 700; }
+.auto-intake { grid-template-columns: minmax(0, 38fr) minmax(0, 54fr); min-height: auto; scroll-margin-top: 30px; }
+.auto-intake .form-intro > p { max-width: 350px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+.auto-intake .project-form { min-width: 0; }
+.auto-consent { grid-template-columns: 20px minmax(0,1fr); align-items: start; }
+.auto-consent input { width: 18px; height: 18px; margin: 0; accent-color: var(--red); }
+.auto-consent span { line-height: 1.6; }
+.auto-intake button:disabled { opacity: .6; cursor: wait; }
+.auto-intake :focus-visible { outline: 2px solid var(--red); outline-offset: 4px; }
+@media(max-width:800px) {
+.auto-hero { display: block; }
+.auto-hero-copy { padding: 70px 0; }
+.auto-hero h1 { font-size: clamp(58px, 13vw, 100px); }
+.auto-art { min-height: 400px; margin: 0 -6vw; padding: 35px 6vw; }
+.auto-art-word { font-size: clamp(70px, 16vw, 120px); }
+.auto-grid { grid-template-columns: 1fr; gap: 22px; }
+.auto-offer, .auto-process { padding-top: 65px; padding-bottom: 65px; }
+.auto-intake .form-intro { margin-bottom: 45px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } .automotive-page .button { transition: none; } }
