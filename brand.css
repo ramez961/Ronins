@@ -3,7 +3,7 @@
 @font-face { font-family: Montserrat; src: url("assets/montserrat-bold.otf") format("opentype"); font-weight: 700 800; font-style: normal; font-display: swap; }
 @font-face { font-family: Montserrat; src: url("assets/montserrat-black.otf") format("opentype"); font-weight: 900; font-style: normal; font-display: swap; }
 :root {
-  --red: #ca1011; --red-deep: #521112; --black: #0c090d; --black-2: #21191d;
+  --red: #521112; --red-deep: #521112; --black: #0c090d; --black-2: #21191d;
   --white: #dfe7e3; --paper: #dfe7e3; --ink: var(--black);
   --muted: rgba(12,9,13,.68); --line: rgba(12,9,13,.2);
   --display: Nikea, Montserrat, sans-serif; --body: Montserrat, Arial, sans-serif;
@@ -30,7 +30,7 @@ body { background-color: var(--paper); background-image: none; }
 .hero h1 { font-size: clamp(48px, 6.8vw, 100px); line-height: 1.12; letter-spacing: -.035em; }
 .hero-art { background: transparent; }
 .hero-art:before, .hero-art:after { display: none; }
-.hero-logo, .industry-logo { clip-path: inset(0 2px 0 0); }
+.hero-logo, .industry-logo { clip-path: inset(0 8px 0 0); }
 .auto-art {
   background-image: url("assets/waves.svg");
   background-size: 84px 42px;
@@ -78,3 +78,46 @@ body { background-color: var(--paper); background-image: none; }
   .brand-mark { width: 31px; height: 33px; }
 }
 
+/* Shared full-page treatment: deep red, quiet waves, and pale typography. */
+body {
+  --ink: #dfe7e3;
+  --muted: rgba(223,231,227,.78);
+  --line: rgba(223,231,227,.24);
+  background: var(--red-deep);
+  color: var(--white);
+}
+body::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: -1;
+  background: linear-gradient(rgba(82,17,18,.72),rgba(82,17,18,.72)),url("assets/waves.svg");
+  background-size: auto,84px 42px;
+}
+body { position: relative; isolation: isolate; }
+.hero, .hero-art, .services, .contact, .auto-art, .auto-process {
+  background: transparent;
+}
+.hero-art::before, .hero-art::after, .services::after, .contact::before, .contact::after,
+.statement::before, .proof::before { display: none; }
+.site-header, .site-footer { color: var(--white); }
+.brand-dot, .header-link span, .text-link span, .auto-back span, .service-number, .service-arrow,
+.section-kicker, .eyebrow, h1 em, h2 em,
+.auto-process .section-kicker, .auto-process li::marker { color: var(--white); }
+.eyebrow-line { background: var(--white); }
+.brand-mark { overflow: hidden; height: 33px; align-items: flex-start; }
+.brand-mark img { width: 100%; height: auto; object-fit: contain; clip-path: inset(0 2px 0 0); }
+.auto-art-word em { color: var(--white); }
+.button-red, .button-black { background: var(--white); color: var(--red-deep); }
+.button-red span, .button-black span { color: var(--red-deep); }
+.button-red:hover, .button-black:hover {
+  background: var(--white); color: var(--red-deep); box-shadow: 5px 5px 0 rgba(223,231,227,.22);
+}
+.main-nav a:hover, .header-link:hover, .text-link:hover { color: var(--white); }
+.main-nav a::after, .header-link::after { background: var(--white); }
+.button:focus-visible, a:focus-visible, .auto-intake :focus-visible,
+.project-form :focus-visible { outline-color: var(--white); }
+.project-form input:focus, .project-form select:focus, .project-form textarea:focus { border-color: var(--white); }
+.project-form input::placeholder, .project-form textarea::placeholder { color: rgba(223,231,227,.6); }
+.project-form select option { background: var(--red-deep); color: var(--white); }
+.project-form input[type="checkbox"] { accent-color: var(--white); }
+.form-status { color: var(--white); }
+.form-status.success { color: #dfe7e3; }
+.auto-intake .form-intro > p, .auto-grid p, .auto-note { color: var(--muted); }
