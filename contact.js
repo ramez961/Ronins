@@ -1,5 +1,15 @@
 const form = document.querySelector('.project-form');
 const status = document.querySelector('.form-status');
+const requestedService = new URLSearchParams(window.location.search).get('service');
+const serviceSelect = form.elements.namedItem('service');
+const requestedIndustry = new URLSearchParams(window.location.search).get('industry');
+const industrySelect = form.elements.namedItem('industry');
+if ([...industrySelect.options].some(option => option.value === requestedIndustry)) {
+  industrySelect.value = requestedIndustry;
+}
+if ([...serviceSelect.options].some(option => option.value === requestedService)) {
+  serviceSelect.value = requestedService;
+}
 
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
@@ -10,7 +20,11 @@ form.addEventListener('submit', async (event) => {
     const response = await fetch('/.netlify/functions/submit-contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(Object.fromEntries(new FormData(form)))
+      body: JSON.stringify((() => {
+        const data = Object.fromEntries(new FormData(form));
+        if (data.industry) data.message = 'Industry: ' + data.industry + '\n\n' + data.message;
+        return data;
+      })())
     });
 
     const result = await response.json();

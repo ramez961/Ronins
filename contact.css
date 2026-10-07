@@ -1,6 +1,9 @@
-.form-page { display: grid; grid-template-columns: 42% 58%; gap: 8vw; padding-top: 110px; padding-bottom: 130px; min-height: calc(100vh - 82px); }
+.form-page { display: grid; grid-template-columns: minmax(0, 42fr) minmax(0, 50fr); gap: 8%; padding-top: 110px; padding-bottom: 130px; min-height: calc(100vh - 82px); }
 .form-intro h1 { font-size: clamp(70px, 9vw, 132px); line-height: .78; letter-spacing: -.035em; margin: 42px 0 38px; }
 .form-intro > p:last-child { max-width: 320px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.form-intro > p { max-width: 350px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+.dealer-route a { line-height: 1.8; }
+.form-intro h1 { line-height: 1; }
 .project-form { display: grid; grid-template-columns: 1fr 1fr; gap: 25px 18px; align-content: start; padding-top: 9px; }
 .project-form label { display: grid; gap: 10px; color: var(--ink); font-size: 10px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .project-form label span { color: var(--muted); font-weight: 400; letter-spacing: 0; text-transform: none; }
