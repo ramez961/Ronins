@@ -26,7 +26,7 @@
       <p>Tell us about your brand, film, series, or visual idea. We’ll get back to you by email.</p>
       <p class="dealer-route">For dealership visuals, <a class="text-link" href="automotive.html#sample">request a free automotive sample ↗</a>.</p>
     </div>
-    <form class="project-form" name="project-inquiry">
+    <form class="project-form" name="project-inquiry" action="mailto:ramezazar.raa@gmail.com" method="post" enctype="text/plain">
       <label>Full name<input name="name" type="text" autocomplete="name" required></label>
       <label>Email address<input name="email" type="email" autocomplete="email" required></label>
       <label>Company or production studio <span>(optional)</span><input name="company" type="text" autocomplete="organization"></label>
@@ -52,11 +52,10 @@
           <option>Not sure yet</option>
         </select>
       </label>
-      <label class="full-width">Tell us about the project<textarea name="message" rows="6" required></textarea></label>
-      <input class="form-honeypot" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="button button-black full-width" type="submit">Send inquiry <span>↗</span></button>
-      <p class="form-status full-width" role="status" aria-live="polite"></p>
-    </form>
+      <label class="full-width">Tell us about the project<textarea name="message" rows="6" maxlength="800" required></textarea></label>
+      <button class="button button-black full-width" type="submit">Prepare inquiry email <span>↗</span></button>
+      <p class="form-status full-width" role="status" aria-live="polite">This form opens a draft in your email app; the website does not send or store your details.</p>
+    <noscript><p class="full-width">JavaScript is off. You can email your inquiry directly to <a href="mailto:ramezazar.raa@gmail.com">ramezazar.raa@gmail.com</a>.</p></noscript>\n    </form>
   </main>
   <script src="contact.js"></script>
 <script src="navigation.js"></script>

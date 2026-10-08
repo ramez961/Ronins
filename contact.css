@@ -11,7 +11,6 @@
 .project-form textarea { resize: vertical; border: 1px solid var(--line); padding: 12px; }
 .project-form input:focus, .project-form select:focus, .project-form textarea:focus { border-color: var(--red); }
 .full-width { grid-column: 1 / -1; }
-.form-honeypot { position: absolute; left: -9999px; }
 .project-form button { justify-self: start; border: 0; cursor: pointer; }
 .form-status { min-height: 22px; margin: 0; color: var(--red); font-size: 12px; line-height: 1.5; }
 .form-status.success { color: #24733b; }
