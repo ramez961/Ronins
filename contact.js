@@ -11,7 +11,7 @@ if ([...serviceSelect.options].some(option => option.value === requestedService)
   serviceSelect.value = requestedService;
 }
 
-const recipient = 'ramezazar.raa@gmail.com';
+const recipient = 'ramezazar.raa@gmail.com,tony.abrjeily@gmail.com';
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();

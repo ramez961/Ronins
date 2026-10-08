@@ -1,6 +1,6 @@
 const form = document.querySelector('[name="automotive-sample"]');
 const status = form.querySelector('.form-status');
-const recipient = 'ramezazar.raa@gmail.com';
+const recipient = 'ramezazar.raa@gmail.com,tony.abrjeily@gmail.com';
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
